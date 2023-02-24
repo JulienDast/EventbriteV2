@@ -1,0 +1,20 @@
+<div class="jumbotron" style="background-image: url('https://media.istockphoto.com/id/1160720443/fr/vectoriel/mod%C3%A8le-simple-abstrait-de-vecteur-sans-couture-de-vecteur-avec-la-texture-de-ligne-dor.jpg?s=612x612&w=0&k=20&c=Gz0PYhArQ0mWCPvzffpIW8fP9FVSlTDWpsYle_MTDiA=');">
+  <div class="text-center">
+    <br>
+    <h1 class="text-center" style="color: black">Bienvenue sur le Eventbrite style THP !</h1>
+    <a href="<%= new_event_path %>" class="btn btn-primary">Créer un évènement</a>
+    <br><br>
+  </div>
+</div>
+
+<h1>Liste des évènements :</h1>
+
+<table class="table">
+<% @event.each do |event| %>
+<ul class="list-group">
+<tr>
+<td class="text-center"><%= link_to event.title, "/events/#{event.id}" %></td>    </tr>
+</ul>
+<% end %>
+</table>
+

@@ -1,0 +1,28 @@
+<div class="container my-5 d-flex flex-column justify-content-center align-items-center">
+    <h1>Créer l'évenement</h1>
+<%= form_with model:@event, class:"form" do |form| %>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+<%=form.label :title,"Nom de l'évenement", class:'form-label' %>
+<%=form.text_field :title,class:"form-control"%>
+<div id="emailHelp" class="form-text">Compris entre 5 et 40 caractères</div>
+
+<%=form.label :start_date,"Jour de l'évenement", class:'form-label' %>
+<%=form.text_field :start_date,class:"form-control" %>
+<div id="emailHelp" class="form-text">Format AAAA/MM/JJ</div>
+
+<%=form.label :description,"Description", class:'form-label' %>
+<%=form.text_area :description,class:"form-control",rows:"8"%>
+<div id="emailHelp" class="form-text">Compris entre 20 et 1000 caractères</div>
+
+<%=form.label :price,"Prix de l'évenement", class:'form-label' %>
+<%=form.text_field :price,class:"form-control"%>
+<div id="emailHelp" class="form-text">Maximum 1000€</div>
+
+<%=form.label :location,"Lieu de l'évenement", class:'form-label' %>
+<%=form.text_field :location,class:"form-control" %>
+<%=form.label :duration,"Durée de l'évenement", class:'form-label' %>
+<%=form.text_field :duration,class:"form-control" %>
+<div id="emailHelp" class="form-text">Tranche de 5 minutes</div>
+
+<%=form.submit "Créer un évenement", class:"btn btn-outline-primary my-3" %>
+<%end%>
